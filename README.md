@@ -40,19 +40,30 @@ O projeto utiliza **HTML5, CSS3 e JavaScript puro**, sem frameworks e sem depend
 
 ```text
 esperanca-viva-web/
+│
 ├── index.html
 ├── projetos.html
 ├── cadastro.html
+│
 ├── css/
 │   └── style.css
+│
 ├── js/
 │   └── script.js
+│
 ├── img/
-│   ├── aularef.png
-│   └── vol.png
+│   ├── vol.webp
+│   ├── aularef.webp
+│   ├── logo-header.webp
+│   ├── logo-circle.webp
+│   ├── favicon-32.png
+│   ├── apple-touch-icon.png
+│   └── android-chrome-192.png
+│
 ├── docs/
 │   ├── Prestacao_de_Contas_2024.pdf
 │   └── Relatorio_Anual_2024.pdf
+│
 └── README.md
 ```
 
