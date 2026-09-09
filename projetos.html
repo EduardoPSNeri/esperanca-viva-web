@@ -1,92 +1,125 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ONG Esperança Viva - Projetos Sociais</title>
-    <link rel="stylesheet" href="css/style.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conheça os projetos sociais da ONG Esperança Viva e descubra como participar ou apoiar.">
+  <meta name="theme-color" content="#14532d">
+  <title>ONG Esperança Viva | Projetos</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-    <header id="navbar" class="site-header">
-        <h1>Projetos Sociais</h1>
-        <nav>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
 
-            <div class="menu" id="menu">
-                <span><a href="index.html">Home</a></span>
-                <span><a href="projetos.html">Projetos</a></span>
-                <span><a href="cadastro.html">Seja Voluntario</a></span>
-            </div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="ONG Esperança Viva - página inicial">
+        <span class="brand-mark" aria-hidden="true">EV</span>
+        <span>ONG Esperança Viva</span>
+      </a>
+      <nav class="site-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html" aria-current="page">Projetos</a></li>
+          <li><a class="nav-cta" href="cadastro.html">Seja voluntário</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
+  <main id="conteudo">
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Atuação social</p>
+        <h1>Projetos que aproximam recursos, conhecimento e oportunidades.</h1>
+        <p>Conheça as principais frentes de atuação da Esperança Viva e encontre uma forma de participar.</p>
+      </div>
+    </section>
 
-        </nav>
-        <br />
-    </header>
+    <section class="section" id="educacao" aria-labelledby="educacao-titulo">
+      <div class="container split-layout">
+        <div>
+          <p class="eyebrow">Educação</p>
+          <h2 id="educacao-titulo">Educação para o Futuro</h2>
+          <p>O projeto oferece aulas de reforço escolar e atividades educativas para crianças em situação de vulnerabilidade social, com foco na melhoria do aprendizado e no desenvolvimento pessoal.</p>
+          <a class="text-link" href="cadastro.html">Participar como voluntário →</a>
+        </div>
 
-    <main class="container" >
-        <section id="educacao">
-            <h2>Projeto Educação para o Futuro</h2>
-            <p>O projeto oferece aulas de reforço escolar e atividades educativas para crianças em situação de
-                vulnerabilidade social, com foco na melhoria do aprendizado e no desenvolvimento pessoal.</p>
+        <figure class="media-card">
+          <img src="img/aularef.png" alt="Crianças participando de uma aula de reforço escolar" loading="lazy" decoding="async">
+          <figcaption>Atividades do projeto Educação para o Futuro.</figcaption>
+        </figure>
+      </div>
+    </section>
 
-            <figure>
-                <img src="img/aularef.png" alt="Crianças em aula de reforço">
-                <figcaption>Atividades do projeto Educação para o Futuro</figcaption>
-            </figure>
-        </section>
-        <section>
-            <h2>Conheça nossos projetos </h2>
-            <p>Nossa ONG desenvolve diversos projetos sociais para atender às necessidades da comunidade. Conheça alguns
-                deles:</p>
-            <br />
-            <ul>
-                <li>Projeto Saúde e Cidadania</li>
-                <li>Alimentação Solidária</li>
-                <li>Esporte e Cultura</li>
-            </ul>
-            <br />
+    <section class="section section-muted" aria-labelledby="frentes-titulo">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Outras frentes</p>
+          <h2 id="frentes-titulo">Conheça nossos projetos</h2>
+        </div>
 
-            <p><strong>Saúde e Cidadania:</strong> Atividades voltadas para a promoção da saúde e direitos humanos.</p>
-            <p><strong>Alimentação Solidária:</strong> Distribuição de cestas básicas e refeições para famílias em
-                situação de vulnerabilidade.</p>
-            <p><strong>Esporte e Cultura:</strong> Incentivo à prática esportiva e atividades culturais para crianças e
-                adolescentes.</p>
+        <div class="card-grid card-grid-3">
+          <article class="card project-card">
+            <span class="project-tag">Saúde</span>
+            <h3>Saúde e Cidadania</h3>
+            <p>Atividades voltadas à promoção da saúde, prevenção e acesso a informações sobre direitos humanos.</p>
+          </article>
+          <article class="card project-card">
+            <span class="project-tag">Alimentação</span>
+            <h3>Alimentação Solidária</h3>
+            <p>Distribuição de cestas básicas e refeições para famílias em situação de vulnerabilidade.</p>
+          </article>
+          <article class="card project-card">
+            <span class="project-tag">Cultura</span>
+            <h3>Esporte e Cultura</h3>
+            <p>Incentivo à prática esportiva e a atividades culturais para crianças e adolescentes.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-        </section>
+    <section class="section" id="voluntariado" aria-labelledby="voluntariado-titulo">
+      <div class="container callout">
+        <div>
+          <p class="eyebrow">Voluntariado</p>
+          <h2 id="voluntariado-titulo">Seu tempo também transforma vidas</h2>
+          <p>Preencha o formulário de interesse e aguarde o contato da equipe. Os voluntários recebem orientação para atuar de acordo com as necessidades de cada projeto.</p>
+        </div>
+        <a class="button button-primary" href="cadastro.html">Inscreva-se como voluntário</a>
+      </div>
+    </section>
 
-        <section id="voluntariado">
-            <h2>Voluntariado</h2>
-            <p>O voluntariado é o coração da nossa ONG. Você pode contribuir com seu tempo, conhecimento e amor ao
-                próximo em diversos projetos.</p>
+    <section class="section section-accent" id="doacoes" aria-labelledby="doacoes-titulo">
+      <div class="container split-layout split-layout-compact">
+        <div>
+          <p class="eyebrow">Apoie</p>
+          <h2 id="doacoes-titulo">Doações</h2>
+          <p>As contribuições ajudam a manter os projetos e ampliar o atendimento à comunidade.</p>
+        </div>
+        <div class="donation-card">
+          <p><strong>Pix:</strong> contato@ongesperancaviva.org</p>
+          <p><strong>Conta Bancária:</strong> Banco Solidário · Ag. 1234 · C/C 56789-0</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-            <h3>Como participar</h3>
-            <p>Basta preencher o formulário de inscrição e aguardar o contato da nossa equipe. Todos os voluntários
-                recebem certificados digitais de participação.</p>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>ONG Esperança Viva</strong>
+        <p>Promovendo solidariedade, dignidade e oportunidades.</p>
+      </div>
+      <address>
+        Rua da Solidariedade, 123 - Patos de Minas/MG<br>
+        <a href="mailto:contato@ongesperancaviva.org">contato@ongesperancaviva.org</a><br>
+        <a href="tel:+5538999990000">(38) 99999-0000</a>
+      </address>
+    </div>
+    <div class="container footer-bottom">© <span data-current-year></span> ONG Esperança Viva. Todos os direitos reservados.</div>
+  </footer>
 
-            <a href="cadastro.html" class="botao">Inscreva-se como voluntário</a>
-        </section>
-
-        <section id="doacoes">
-            <h2>Doações</h2>
-            <p>Suas doações ajudam a manter nossos projetos e transformar vidas. Aceitamos contribuições financeiras e
-                materiais escolares.</p>
-
-            <ul>
-                <li><strong>Pix:</strong> contato@ongesperancaviva.org</li>
-                <li><strong>Conta Bancária:</strong> Banco Solidário - Ag: 1234 - C/C: 56789-0</li>
-            </ul>
-        </section>
-    </main>
-
-	<footer class="site-footer">
-        &copy; 2025 ONG Esperança Viva | Todos os direitos reservados.
-        Rua da Solidariedade, 123 - Patos de Minas/MG |
-        <a href="mailto:contato@ongesperancaviva.org">contato@ongesperancaviva.org</a> |
-        Tel: (38) 99999-0000
-    </footer>
-    <script src="js/script.js"></script>
-
+  <script src="js/script.js" defer></script>
 </body>
-
 </html>

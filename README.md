@@ -1,147 +1,109 @@
-#  ONG Esperança Viva
+# ONG Esperança Viva
 
-Sistema web desenvolvido para gerenciar o cadastro de voluntários, exibir projetos sociais e promover ações comunitárias da ONG **Esperança Viva**.  
-O projeto foi construído com foco em **Single Page Application (SPA)**, manipulação do **DOM**, **validação de formulários** e **armazenamento local** de dados (LocalStorage).
+Site institucional estático desenvolvido como projeto de front-end para apresentar a ONG fictícia **Esperança Viva**, divulgar projetos sociais e demonstrar um fluxo de cadastro de interesse para voluntariado com persistência local no navegador.
 
----
+## Visão geral
 
-##  Índice
-- [Sobre o Projeto](#sobre-o-projeto)
-- [Funcionalidades](#funcionalidades)
-- [Tecnologias Utilizadas](#tecnologias-utilizadas)
-- [Estrutura de Pastas](#estrutura-de-pastas)
-- [Instalação e Execução](#instalação-e-execução)
-- [Como Contribuir](#como-contribuir)
-- [Histórico de Versionamento](#histórico-de-versionamento)
-- [Licença](#licença)
-- [Créditos](#créditos)
+O projeto utiliza **HTML5, CSS3 e JavaScript puro**, sem frameworks e sem dependências externas. A aplicação é formada por três páginas:
 
----
+- `index.html` — apresentação institucional, missão, história, equipe e transparência;
+- `projetos.html` — projetos, voluntariado e informações de doação;
+- `cadastro.html` — formulário de interesse e listagem dos cadastros salvos no navegador.
 
-##  Sobre o Projeto
+> **Importante:** este é um projeto demonstrativo. Não existe back-end, banco de dados ou envio real do formulário. Os dados cadastrados ficam apenas no `LocalStorage` do navegador utilizado.
 
-O sistema foi desenvolvido com o objetivo de **digitalizar o processo de cadastro de voluntários** e **exibir os projetos da ONG** de forma interativa, utilizando conceitos modernos de **SPA (Single Page Application)** com **JavaScript puro**.
+## Funcionalidades
 
-Além disso, o site conta com:
-- Animações suaves e interativas;
-- Validação de consistência de dados;
-- Layout responsivo;
-- Armazenamento de cadastros em `LocalStorage`;
-- Interface amigável e intuitiva.
+- Layout responsivo para desktop, tablet e celular;
+- navegação consistente entre páginas;
+- estrutura semântica e melhorias de acessibilidade;
+- formulário com validação nativa e feedback visual;
+- máscara de telefone;
+- prevenção de cadastro duplicado por e-mail no mesmo navegador;
+- persistência local de voluntários;
+- remoção individual e limpeza dos cadastros locais;
+- renderização segura da tabela via DOM, sem interpolação de dados do usuário em `innerHTML`;
+- links de transparência para os PDFs incluídos no repositório;
+- ano do rodapé atualizado automaticamente.
 
----
+## Tecnologias
 
-##  Funcionalidades
+| Área | Tecnologia |
+| --- | --- |
+| Estrutura | HTML5 semântico |
+| Estilos | CSS3 responsivo |
+| Interatividade | JavaScript ES6+ / DOM API |
+| Persistência | Web Storage (`LocalStorage`) |
+| Versionamento | Git e GitHub |
 
- Menu mobile com alternância dinâmica;  
- Scroll suave entre seções;  
- Sistema de cadastro de voluntários;  
- Validação de campos obrigatórios com aviso ao usuário;  
- Exibição de voluntários cadastrados em tabela;  
- Máscara automática de telefone;  
- Animações com base no scroll (efeito de entrada);  
- Layout responsivo e moderno.
+## Estrutura
 
----
-
-##  Tecnologias Utilizadas
-
-| Tipo | Ferramenta |
-|------|-------------|
-| **Frontend** | HTML5, CSS3, JavaScript (DOM Manipulation) |
-| **Armazenamento** | LocalStorage |
-| **Controle de versão** | Git & GitHub |
-| **Design e UI** | Responsividade, animações em CSS e JS |
-
----
-
-##  Estrutura de Pastas
-
-```
-ong-esperanca-viva/
-│
+```text
+esperanca-viva-web/
 ├── index.html
-├── cadastro.html
 ├── projetos.html
-│
-├── /css/
-│   ├── style.min.css 
-│
-├── /js/
-│   ├── script.js
-│
-├── /img/
+├── cadastro.html
+├── css/
+│   └── style.css
+├── js/
+│   └── script.js
+├── img/
 │   ├── aularef.png
-│   ├── vol.png
-│
-├── /docs/
-│   ├── Prestacao_de_contas_2024.pdf
-│   ├── relatorio_anual_2024.pdf
-│
+│   └── vol.png
+├── docs/
+│   ├── Prestacao_de_Contas_2024.pdf
+│   └── Relatorio_Anual_2024.pdf
 └── README.md
 ```
 
----
+## Executando localmente
 
-##  Instalação e Execução
+### Opção 1 — abrir diretamente
 
-1. **Clone o repositório**
-   ```bash
-   git clone https://github.com/seuusuario/ong-esperanca-viva.git
-   ```
+Abra o arquivo `index.html` no navegador.
 
-2. **Acesse a pasta do projeto**
-   ```bash
-   cd ong-esperanca-viva
-   ```
+### Opção 2 — servidor local
 
-3. **Abra o arquivo `index.html` no navegador**
-   > Nenhuma dependência externa é necessária. O projeto roda localmente com HTML + JS puro.
+Com Python instalado:
 
----
+```bash
+python -m http.server 8000
+```
 
-##  Como Contribuir
+Depois acesse `http://localhost:8000`.
 
-1. Faça um fork do projeto  
-2. Crie uma branch com a sua feature  
-   ```bash
-   git checkout -b minha-feature
-   ```
-3. Commit suas alterações  
-   ```bash
-   git commit -m "Adiciona nova funcionalidade X"
-   ```
-4. Envie para o seu repositório  
-   ```bash
-   git push origin minha-feature
-   ```
-5. Abra um **Pull Request** neste repositório principal
+## Clonar o repositório
 
-> Cada PR deve referenciar uma **issue** (ex: “Resolve #5”) e conter descrição das alterações.
+```bash
+git clone https://github.com/EduardoPSNeri/esperanca-viva-web.git
+cd esperanca-viva-web
+```
 
----
+## Decisões da refatoração
 
-##  Histórico de Versionamento
+A versão refatorada corrige problemas da implementação anterior e reduz riscos comuns em aplicações front-end:
 
-- **v1.0.0** – Estrutura inicial do projeto, layout responsivo e validação de formulário  
-- **v1.1.0** – Implementação de animações, máscara de telefone e scroll suave  
-- **v1.2.0** – Ajustes de SPA e melhorias de UX/UI  
+- remoção de IDs HTML duplicados no formulário;
+- correção dos rótulos invertidos dos documentos de transparência;
+- substituição da renderização de dados com `innerHTML` por criação segura de elementos DOM;
+- tratamento de falhas ao ler ou gravar o `LocalStorage`;
+- retirada de CPF, endereço completo e data de nascimento do cadastro inicial demonstrativo, reduzindo coleta desnecessária de dados pessoais;
+- reorganização completa do CSS, removendo duplicações e seletores sem uso;
+- melhoria de contraste, foco visível, navegação por teclado e suporte a `prefers-reduced-motion`;
+- correção da documentação: o projeto é multipágina, e não uma SPA.
 
----
+## Limitações atuais
 
-##  Licença
+Para uso real por uma ONG, ainda seriam necessários:
 
-Este projeto está licenciado sob a licença **MIT** — veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+- API e banco de dados;
+- autenticação e autorização;
+- política de privacidade e base legal adequada para tratamento de dados pessoais;
+- proteção contra abuso e spam;
+- validação no servidor;
+- serviço real de envio/gestão de inscrições;
+- otimização das imagens para reduzir o peso da página.
 
----
+## Autor
 
-##  Créditos
-
-Desenvolvido por **Eduardo Neri** ONG Esperança Viva – Promovendo solidariedade, amor e esperança.
-
----
-
-### 📎 Exemplo de Issue
-> **Título:** Implementar validação no formulário de cadastro  
-> **Descrição:** Verificar consistência dos campos “nome” e “email” e exibir mensagem de erro.  
-> **Status:** Concluído   
+Desenvolvido por **Eduardo Neri** como projeto de estudo e portfólio.
